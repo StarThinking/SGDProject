@@ -1,0 +1,37 @@
+#!/usr/local/bin/gnuplot -p
+
+set terminal qt size 600,400 enhanced font "Helvetica,20"
+
+set key right top
+set key font ",14"
+set yrange [0.26:4000]
+set logscale y 2
+set style line 2 lc rgb 'black' lt 1 lw 1.5
+set style data histogram
+set style histogram cluster gap 1
+set style histogram errorbars gap 1 lw 1.5
+set style fill pattern border -1
+set boxwidth 1.0
+set xtics font ", 16" offset 0,0.5
+set ytics font ", 18"
+#set format y '%2.0f%%' 
+set ylabel font ", 24"
+set xlabel font ", 24"
+#set xtics rotate by -10
+#set xtics offset -3,-0.1
+set xtics format ""
+set grid ytics
+set border lw 1.5
+#set title "Throughput Overhead"
+set xlabel "Packet Size (bytes)" offset 0,-0.5,0
+set ylabel "Latency (µs)" 
+
+plot \
+newhistogram "8" offset 0,0.7, "latency_newhis8.dat" using 2:3:4:xtic(1) title "Without SafeTimer" ls 2 fs pattern 0, \
+                  'latency_newhis8.dat' u 5:6:7 title "With SafeTimer" ls 2 fs pattern 1,\
+newhistogram "64" offset 0,0.7, "latency_newhis64.dat" using 2:3:4:xtic(1) notitle ls 2 fs pattern 0, \
+                  'latency_newhis64.dat' u 5:6:7 notitle ls 2 fs pattern 1,\
+newhistogram "4K" offset 0,0.7, "latency_newhis4096.dat" using 2:3:4:xtic(1) notitle ls 2 fs pattern 0, \
+                  'latency_newhis4096.dat' u 5:6:7 notitle ls 2 fs pattern 1, \
+newhistogram "64K" offset 0,0.7, "latency_newhis65536.dat" using 2:3:4:xtic(1) notitle ls 2 fs pattern 0, \
+                  'latency_newhis65536.dat' u 5:6:7 notitle ls 2 fs pattern 1

@@ -9,6 +9,4 @@ $(PAPER).pdf: $(TEX) $(BIB) $(FIGS)
 	pdflatex $(PAPER)
 
 clean:
-	rm -f *.pdf *.aux *.bbl *.blg *.log *.out 
-
-
+	rm -f *.aux *.bbl *.blg *.log *.out *.fdb_latexmk *.fls *.synctex.gz
