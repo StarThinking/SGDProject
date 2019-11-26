@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+
+\usepackage{fullpage} % Package to use full page
+\usepackage{parskip} % Package to tweak paragraph skipping
+\usepackage{tikz} % Package for drawing
+\usepackage{amsmath}
+\usepackage[breaklinks]{hyperref}
+\usepackage{url}
+\usepackage{breakurl} 
+\usepackage{enumerate}
+\usepackage{subcaption}
+\usepackage{mathptmx}
+\usepackage{epsfig}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+\usepackage{siunitx}
+%\usepackage{minipage}
+\def \hfillx {\hspace*{-\textwidth} \hfill}
+
+\title{Project: Stochastic Gradient Descent}
+\author{Yuanxue Ren, Sixiang Ma}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\section{Experiments}
+
+\section{Analysis of $\rho$-Lipschitz properties}
+
+\section{Results}
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c} 
+\multicolumn{5}{c}{}             &  \multicolumn{4}{c}{Logistic loss}        & \multicolumn{2}{c}{Logistic loss} \\
+{Scenario} & {a}   & {n}  & {N}  & {\# trials} & {Mean} & {Std Dev} & {Min} & {Excess Risk} & {Mean} & {Std Dev} \\ \hline
+    1      & 0.05  & 50   & 400  & 30          & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\
+    1      & 0.05  & 100  & 400  & 30	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\
+    1      & 0.05  & 500  & 400  & 30 	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\
+    1      & 0.05  & 1000 & 400  & 30 	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\ \hline
+    1      & 0.3   & 50   & 400  & 30 	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\
+    1      & 0.3   & 100  & 400  & 30 	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\
+    1      & 0.3   & 500  & 400  & 30 	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\
+    1      & 0.3   & 1000 & 400  & 30 	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\ \hline
+    2      & 0.05  & 50   & 400  & 30          & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\
+    2      & 0.05  & 100  & 400  & 30	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\
+    2      & 0.05  & 500  & 400  & 30 	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\
+    2      & 0.05  & 1000 & 400  & 30 	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\ \hline
+    2      & 0.3   & 50   & 400  & 30 	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\
+    2      & 0.3   & 100  & 400  & 30 	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\
+    2      & 0.3   & 500  & 400  & 30 	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\
+    2      & 0.3   & 1000 & 400  & 30 	       & 0.00   & 0.00      & 0.00  & 0.00          & 0.00   & 0.00      \\ 
+\end{tabular}
+
+\section{Conclusion}
+
+\appendix
+\section{Appendix: Symbol Listing}
+
+\section{Appendix: Library Routines}
+
+\section{Appendix: Code}
+
+\end{document}
