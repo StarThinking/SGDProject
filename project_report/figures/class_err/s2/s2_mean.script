@@ -1,0 +1,30 @@
+#!/usr/bin/gnuplot -p
+
+set terminal qt size 600,400 enhanced font "Helvetica,20"
+
+set key right top
+set key font ",17"
+set yrange [0.0:0.1]
+#set logscale y 2
+set style line 2 lc rgb 'black' lt 1 lw 1.5
+set style data histogram
+set style histogram cluster gap 1
+set style histogram errorbars gap 1 lw 1.5
+set style fill pattern border -1
+set boxwidth 1.0
+set xtics font ", 18"
+set ytics font ", 18"
+#set format y '%2.0f%%' 
+set ylabel font ", 18"
+set xlabel font ", 18"
+set xtics format ""
+#set xtics rotate by -15 offset -5,-0.2
+set grid ytics
+set border lw 1.5
+
+#set title "Logistic loss"
+set xlabel "Number of training examples"  
+set ylabel "Mean of classification error"  
+
+plot "s2_mean.dat" using 2:3:4:xtic(1) title "{/Symbol s}=0.05" ls 2 fs pattern 0, \
+                   '' using 5:6:7 title "{/Symbol s}=0.3" ls 2 fs pattern 4
